@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Task from "./components/Task";
+import App from "./components/App";
 import {createStore} from "redux";
 import reducer from "./reducers/Reducer";
 
 let render = () => {
     ReactDOM.render(
-        <Task />,
+        <App />,
         document.getElementById('root')
     );
 };

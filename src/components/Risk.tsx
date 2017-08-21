@@ -1,6 +1,6 @@
 import * as React from "react";
 
-class Task extends React.Component<{}, {}>{
+class Risk extends React.Component<{}, {}>{
     render() {
         return (
             <li>
@@ -10,4 +10,4 @@ class Task extends React.Component<{}, {}>{
     }
 }
 
-export default Task;
+export default Risk;
