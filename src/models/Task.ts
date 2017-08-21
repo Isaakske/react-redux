@@ -4,7 +4,8 @@ import Risk from "../models/Risk";
 interface Task {
     'id': number,
     'text': string,
-    'risks': List<Risk>
+    'risks': List<Risk>,
+    'nextRiskId': number
 }
 
 export default Task;
