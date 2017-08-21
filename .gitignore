@@ -1,0 +1,6 @@
+/.idea/
+/node_modules/
+/typings/globals/
+/typings/index.d.ts
+/dist/
+package-lock.json
