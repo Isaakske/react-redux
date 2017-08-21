@@ -1,11 +1,13 @@
 import * as React from "react";
 
-class Task extends React.Component{
+class Task extends React.Component<{}, {}>{
     render() {
         return (
             <div>
-                <button onClick={} />
+                <button>Add</button>
             </div>
         );
     }
 }
+
+export default Task;
