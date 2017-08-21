@@ -5,6 +5,7 @@ module.exports = {
     output: {
         filename: "./dist/bundle.js"
     },
+    devtool: "eval",
     resolve: {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
     },
@@ -20,9 +21,12 @@ module.exports = {
             {test: /\.js$/, loader: "source-map-loader"}
         ]
     },
-
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"
-    }
+    },
+    devServer: {
+        historyApiFallback: true
+    },
+    node: {fs: "empty"}
 };
