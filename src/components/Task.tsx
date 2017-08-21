@@ -4,6 +4,7 @@ class Task extends React.Component<{}, {}>{
     render() {
         return (
             <div>
+                <input type="text" />
                 <button>Add</button>
             </div>
         );
