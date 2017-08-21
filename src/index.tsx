@@ -13,3 +13,4 @@ let render = () => {
 
 let store = createStore(reducer);
 store.subscribe(render);
+render();
