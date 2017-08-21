@@ -1,5 +1,6 @@
 import {List} from "immutable";
 import Task from "../models/Task";
+import Risk from "../models/Risk";
 
 export default (state: List<Task> = <List<Task>>List.of(), action) => {
     switch(action.type) {

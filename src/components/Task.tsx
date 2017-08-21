@@ -6,6 +6,9 @@ class Task extends React.Component<{}, {}>{
             <div>
                 <input type="text" />
                 <button>Add</button>
+                <ul>
+
+                </ul>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 import {List} from "immutable";
+import Risk from "../models/Risk";
 
 interface Task {
     'id': number,
