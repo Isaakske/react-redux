@@ -11,11 +11,13 @@ export default (state: List<Task> = <List<Task>>List.of(), action) => {
 
             return  state.push(task);
         case 'ADD_RISK':
-            let foundtask = state.get(action.taskId);
-            let risk = {id: foundtask.nextRiskId, text: action.text};
-            foundtask.risks.push(risk);
+            let newState = state;
+            let foundtask = newState.get(action.taskId);
+            let risk = {id: foundtask.nextRiskId++, text: action.text};
+            foundtask.risks = foundtask.risks.push(risk);
+            newState.set(action.taskId, foundtask);
 
-            return state;
+            return newState;
         default:
             return state;
     }
