@@ -9,6 +9,7 @@ class TaskComponent extends React.Component<TaskProps, {}>{
     render() {
         return (
             <div>
+                <h1>{this.props.task.text}</h1>
                 <input type="text" />
                 <button>Add Risk</button>
             </div>
