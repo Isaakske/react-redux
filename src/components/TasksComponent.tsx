@@ -1,6 +1,6 @@
 import * as React from "react";
-import Task from "../models/Task";
 import {List} from "immutable";
+import Task from "../models/Task";
 import TaskComponent from "./TaskComponent";
 
 interface TasksProps {

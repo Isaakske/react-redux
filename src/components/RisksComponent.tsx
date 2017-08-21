@@ -1,6 +1,6 @@
 import * as React from "react";
-import Risk from "../models/Risk";
 import {List} from "immutable";
+import Risk from "../models/Risk";
 import RiskComponent from "./RiskComponent";
 
 interface RisksProps {

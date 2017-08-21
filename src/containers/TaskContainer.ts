@@ -1,8 +1,8 @@
 import {State} from "../reducers/State";
 import {connect} from "react-redux";
+import {List} from "immutable";
 import TasksComponent from "../components/TasksComponent";
 import Task from "../models/Task";
-import {List} from "immutable";
 
 interface ContentStateProps {
     tasks: List<Task>

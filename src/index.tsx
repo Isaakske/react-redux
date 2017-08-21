@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import App from "./components/AppComponent";
 import {createStore} from "redux";
-import reducer from "./reducers/Reducer";
 import {Provider} from "react-redux";
+import App from "./components/AppComponent";
+import reducer from "./reducers/Reducer";
 
 let store = createStore(reducer);
 
