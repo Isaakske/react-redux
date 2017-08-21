@@ -1,4 +1,4 @@
-import {State} from "../reducers/State";
+import {State} from "../reducers/Reducer";
 import {connect} from "react-redux";
 import {List} from "immutable";
 import TasksComponent from "../components/TasksComponent";
