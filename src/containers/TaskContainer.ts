@@ -1,5 +1,5 @@
 import {State} from "../reducers/Reducer";
-import {connect} from "react-redux";
+import {connect, Dispatch} from "react-redux";
 import {List} from "immutable";
 import TasksComponent from "../components/TasksComponent";
 import Task from "../models/Task";
@@ -16,4 +16,16 @@ const mapStateToProps = (state: State): ContentStateProps => {
     }
 };
 
-export default connect(mapStateToProps)(TasksComponent)
+interface TasksDispatchProps {
+    onMount: (tasks: List<Task>) => void
+}
+
+const mapDispatchToProps = (dispatch: Dispatch<Function>): TasksDispatchProps => {
+    return {
+        onMount: (tasks: List<Task>) => {
+
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TasksComponent)
