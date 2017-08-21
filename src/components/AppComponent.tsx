@@ -1,4 +1,5 @@
 import * as React from "react";
+import TaskContainer from "../containers/TaskContainer";
 
 class App extends React.Component<{}, {}>{
     render() {
@@ -6,6 +7,7 @@ class App extends React.Component<{}, {}>{
             <div>
                 <input type="text" />
                 <button>Add Task</button>
+                <TaskContainer />
             </div>
         );
     }
