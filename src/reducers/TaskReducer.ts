@@ -16,9 +16,8 @@ export default (state: List<Task> = <List<Task>>List.of(), action) => {
             let foundtask = newState.get(action.taskId);
             let risk = {id: foundtask.nextRiskId++, text: action.text};
             foundtask.risks = foundtask.risks.push(risk);
-            newState.set(action.taskId, foundtask);
 
-            return newState;
+            return newState.set(action.taskId, foundtask);
         default:
             return state;
     }
