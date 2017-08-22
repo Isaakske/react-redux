@@ -13,8 +13,8 @@ export default class App extends React.Component<AppComponentProps, {}>{
                 <input type="text" ref={node => {
                     input = node;
                 }} />
-                <button onClick={() => {
-                    this.props.onClick(input.value);
+                <button onClick={(event: any) => {
+                    this.props.onClick(input.value)(event);
                     input.value = '';
                 }}>Add Task</button>
                 <TasksContainer />
