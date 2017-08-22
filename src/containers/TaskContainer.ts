@@ -16,16 +16,4 @@ const mapStateToProps = (state: State): ContentStateProps => {
     }
 };
 
-interface TasksDispatchProps {
-    onMount: (tasks: List<Task>) => void
-}
-
-const mapDispatchToProps = (dispatch: Dispatch<Function>): TasksDispatchProps => {
-    return {
-        onMount: (tasks: List<Task>) => {
-
-        }
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(TasksComponent)
+export default connect(mapStateToProps)(TasksComponent)
