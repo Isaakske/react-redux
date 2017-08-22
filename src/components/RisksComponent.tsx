@@ -11,7 +11,7 @@ export default class RisksComponent extends React.Component<RisksProps, {}> {
     render() {
         return (
             <ul>
-                {this.props.risks.map(risk =>
+                {this.props.risks.map((risk: Risk) =>
                     <RiskComponent risk={risk} />
                 )}
             </ul>
