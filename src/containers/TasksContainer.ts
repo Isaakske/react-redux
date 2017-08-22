@@ -16,4 +16,4 @@ const mapStateToProps = (state: State): ContentStateProps => {
     }
 };
 
-export default connect(mapStateToProps)(TasksComponent)
+export default connect(mapStateToProps)(TasksComponent);

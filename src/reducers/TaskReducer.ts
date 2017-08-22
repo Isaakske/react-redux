@@ -21,4 +21,4 @@ export default (state: List<Task> = <List<Task>>List.of(), action) => {
         default:
             return state;
     }
-};
+}
