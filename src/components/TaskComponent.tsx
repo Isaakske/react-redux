@@ -16,8 +16,8 @@ class TaskComponent extends React.Component<TaskProps, {}>{
                 <input type="text" ref={node => {
                     input = node;
                 }} />
-                <button onClick={() => {
-                    this.props.onClick(this.props.task.id, input.value);
+                <button onClick={(event: any) => {
+                    this.props.onClick(this.props.task.id, input.value)(event);
                     input.value = '';
                 }}>Add Risk</button>
                 <RisksComponent risks={this.props.task.risks} />
