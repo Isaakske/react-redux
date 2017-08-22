@@ -7,4 +7,4 @@ export interface State extends Immutable.Map<string, any> {
     tasks: List<Task>
 }
 
-export default <Reducer<State>>combineReducers({TaskReducer});
+export default <Reducer<State>>combineReducers({tasks: TaskReducer});
