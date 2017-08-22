@@ -4,8 +4,7 @@ import TasksContainer from "../containers/TasksContainer";
 import Task from "../models/Task";
 
 interface AppComponentProps {
-    onClick: (text: string) => (event: any) => void,
-    tasks: List<Task>
+    onClick: (text: string) => (event: any) => void
 }
 
 export default class App extends React.Component<AppComponentProps, {}>{
