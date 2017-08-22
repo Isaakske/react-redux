@@ -1,6 +1,6 @@
 import * as React from "react";
 import {List} from "immutable";
-import TaskContainer from "../containers/TaskContainer";
+import TasksContainer from "../containers/TasksContainer";
 import Task from "../models/Task";
 
 interface AppComponentProps {
@@ -17,7 +17,7 @@ export default class App extends React.Component<AppComponentProps, {}>{
                     input = node;
                 }} />
                 <button onClick={this.props.onClick(input.value)}>Add Task</button>
-                <TaskContainer />
+                <TasksContainer />
             </div>
         );
     }
