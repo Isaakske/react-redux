@@ -6,6 +6,8 @@ interface AppDispatchProps {
     onClick: (text: string) => (event: any) => void
 }
 
+const mapStateToProps = () => {return {}};
+
 const mapDispatchToProps = (dispatch: Dispatch<Function>): AppDispatchProps => {
     return {
         onClick: (text: string) => (event: any) => {
@@ -19,4 +21,4 @@ const mapDispatchToProps = (dispatch: Dispatch<Function>): AppDispatchProps => {
     }
 };
 
-export default connect(mapDispatchToProps)(AppComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(AppComponent);
