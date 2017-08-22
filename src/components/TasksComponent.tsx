@@ -11,7 +11,7 @@ export default class TasksComponent extends React.Component<TasksProps, {}> {
     render() {
         return (
             <div>
-                {this.props.tasks.map(task =>
+                {this.props.tasks.map((task: Task) =>
                     <TaskContainer task={task} />
                 )}
             </div>
