@@ -8,12 +8,19 @@ interface AppComponentProps {
 export default class App extends React.Component<AppComponentProps, {}>{
     render() {
         let input;
+        let button;
         return (
             <div>
                 <input type="text" ref={node => {
                     input = node;
+                }} onKeyDown={(event: any) => {
+                    if(event.keyCode === 13) {
+                        button.click();
+                    }
                 }} />
-                <button onClick={(event: any) => {
+                <button ref={node => {
+                    button = node;
+                }} onClick={(event: any) => {
                     this.props.onClick(input.value)(event);
                     input.value = '';
                 }}>Add Task</button>
