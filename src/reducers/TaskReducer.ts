@@ -14,9 +14,12 @@ export default (state: List<Task> = <List<Task>>List.of(), action) => {
         case 'ADD_RISK':
             let foundtask = state.get(action.taskId);
             let risk = {id: foundtask.nextRiskId++, text: action.text};
-            foundtask.risks = foundtask.risks.push(risk);
+            let risks = foundtask.risks.set(risk.id, risk);
 
-            return state.set(action.taskId, foundtask);
+            //make new object with new risks, impossible to update risks property of old object
+            let newTask = {id: foundtask.id, nextRiskId: foundtask.nextRiskId, text: foundtask.text, risks: risks};
+
+            return state.set(action.taskId, newTask);
         default:
             return state;
     }
