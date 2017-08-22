@@ -8,9 +8,7 @@ interface RiskProps {
 class RiskComponent extends React.Component<RiskProps, {}>{
     render() {
         return (
-            <li>
-                {this.props.risk.text}
-            </li>
+            <li>{this.props.risk.id}: {this.props.risk.text}</li>
         );
     }
 }

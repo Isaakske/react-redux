@@ -12,7 +12,7 @@ class TaskComponent extends React.Component<TaskProps, {}>{
         let input;
         return (
             <div>
-                <h1>{this.props.task.text}</h1>
+                <h1>{this.props.task.id}: {this.props.task.text}</h1>
                 <input type="text" ref={node => {
                     input = node;
                 }} />
