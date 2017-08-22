@@ -12,7 +12,7 @@ export default class RisksComponent extends React.Component<RisksProps, {}> {
         return (
             <ul>
                 {this.props.risks.map((risk: Risk) =>
-                    <RiskComponent risk={risk} />
+                    <RiskComponent risk={risk} key={risk.id} />
                 )}
             </ul>
         );

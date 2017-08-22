@@ -12,7 +12,7 @@ export default class TasksComponent extends React.Component<TasksProps, {}> {
         return (
             <div>
                 {this.props.tasks.map((task: Task) =>
-                    <TaskContainer task={task} />
+                    <TaskContainer task={task} key={task.id} />
                 )}
             </div>
         );
