@@ -1,7 +1,5 @@
 import * as React from "react";
-import {List} from "immutable";
 import TasksContainer from "../containers/TasksContainer";
-import Task from "../models/Task";
 
 interface AppComponentProps {
     onClick: (text: string) => (event: any) => void
