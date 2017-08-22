@@ -10,13 +10,20 @@ interface TaskProps {
 class TaskComponent extends React.Component<TaskProps, {}>{
     render() {
         let input;
+        let button;
         return (
             <div>
                 <h1>{this.props.task.id}: {this.props.task.text}</h1>
                 <input type="text" ref={node => {
                     input = node;
+                }} onKeyDown={(event: any) => {
+                    if(event.keyCode === 13) {
+                        button.click();
+                    }
                 }} />
-                <button onClick={(event: any) => {
+                <button ref={node => {
+                    button = node;
+                }} onClick={(event: any) => {
                     this.props.onClick(this.props.task.id, input.value)(event);
                     input.value = '';
                 }}>Add Risk</button>
