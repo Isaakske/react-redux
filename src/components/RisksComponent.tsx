@@ -10,12 +10,19 @@ interface RisksProps {
 
 export default class RisksComponent extends React.Component<RisksProps, {}> {
     render() {
-        return (
-            <ul>
-                {this.props.risks.map((risk: Risk) =>
-                    <RiskComponent risk={risk} key={risk.id} />
-                )}
-            </ul>
-        );
+        if(this.props.visible) {
+            return (
+                <ul>
+                    {this.props.risks.map((risk: Risk) =>
+                        <RiskComponent risk={risk} key={risk.id} />
+                    )}
+                </ul>
+            );
+        } else {
+            return (
+                <ul>
+                </ul>
+            );
+        }
     }
 }
