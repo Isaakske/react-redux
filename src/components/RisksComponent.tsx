@@ -4,7 +4,8 @@ import Risk from "../models/Risk";
 import RiskComponent from "./RiskComponent";
 
 interface RisksProps {
-    risks: List<Risk>
+    risks: List<Risk>,
+    visible: boolean
 }
 
 export default class RisksComponent extends React.Component<RisksProps, {}> {

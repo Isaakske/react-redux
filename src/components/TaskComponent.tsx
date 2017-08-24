@@ -31,7 +31,7 @@ class TaskComponent extends React.Component<TaskProps, {}>{
                 <button onClick={(event: any) => {
                     this.props.toggleVisible(this.props.task.id)(event);
                 }}>Toggle Risks</button>
-                <RisksComponent risks={this.props.task.risks} />
+                <RisksComponent risks={this.props.task.risks} visible={this.props.task.risksVisible} />
             </div>
         );
     }
