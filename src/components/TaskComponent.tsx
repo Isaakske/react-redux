@@ -4,6 +4,7 @@ import RisksComponent from "./RisksComponent";
 
 interface TaskProps {
     onClick: (taskId: number, text: string) => (event: any) => void,
+    toggleVisible: (taskId: number) => (event: any) => void,
     task: Task
 }
 
@@ -27,6 +28,9 @@ class TaskComponent extends React.Component<TaskProps, {}>{
                     this.props.onClick(this.props.task.id, input.value)(event);
                     input.value = '';
                 }}>Add Risk</button>
+                <button onClick={(event: any) => {
+                    this.props.toggleVisible(this.props.task.id)(event);
+                }}>Toggle Risks</button>
                 <RisksComponent risks={this.props.task.risks} />
             </div>
         );

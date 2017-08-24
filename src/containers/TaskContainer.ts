@@ -15,7 +15,8 @@ const mapStateToProps = (state: State, ownProps): TaskProps => {
 };
 
 interface TaskDispatchProps {
-    onClick: (taskId: number, text: string) => (event: any) => void
+    onClick: (taskId: number, text: string) => (event: any) => void,
+    toggleVisible: (taskId: number) => (event: any) => void
 }
 
 const mapDispatchToProps = (dispatch: Dispatch<Function>): TaskDispatchProps => {
@@ -26,6 +27,14 @@ const mapDispatchToProps = (dispatch: Dispatch<Function>): TaskDispatchProps => 
                     type: 'ADD_RISK',
                     taskId: taskId,
                     text: text
+                }
+            )
+        },
+        toggleVisible: (taskId: number) => (event: any) => {
+            dispatch(
+                {
+                    type: 'TOGGLE_RISKS',
+                    taskId: taskId
                 }
             )
         }
