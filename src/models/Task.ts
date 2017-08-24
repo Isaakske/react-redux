@@ -5,7 +5,8 @@ interface Task {
     'id': number,
     'text': string,
     'risks': List<Risk>,
-    'nextRiskId': number
+    'nextRiskId': number,
+    'risksVisible': boolean
 }
 
 export default Task;
